@@ -2,19 +2,18 @@ import java.util.Scanner;
 
 public class Launcher {
     public static void main(String[] args) {
-        Scanner myObj = new Scanner(System.in);
-        System.out.println("Welcome everybody !!!");
-        String input = myObj.nextLine();
-
+        System.out.println("Bienvenue,\nVeuillez saisir du texte :");
+        Scanner scan = new Scanner(System.in);
+        String input = scan.nextLine();
         while (!input.equals("quit")) {
             if (input.equals("fibo")) {
                 System.out.println("Veuillez saisir la valeur de n :");
-                input = myObj.nextLine();
+                input = scan.nextLine();
                 System.out.println(fibonacci(Integer.parseInt(input)));
             } else {
                 System.out.println("Unknown command");
             }
-            input = myObj.nextLine();
+            input = scan.nextLine();
         }
     }
 
